@@ -1,7 +1,7 @@
 package Learning.Code;
 
 public class TreeNode {
-	int val;
+	public int val;
 	TreeNode left;
 	TreeNode right;
 
