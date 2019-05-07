@@ -18,8 +18,6 @@ public class _257BinaryTreePaths {
 //		4. if curr has right, curr = curr.right, go to 2
 //		5. reverse pathStack and add pathStack into pathCollection
 //		6. pathStack pop
-//		7. curr = pathStack.pop
-//	    8. if curr!=null go to 2
 
 		TreeNode curr = root;
 		this.traverse(curr);
