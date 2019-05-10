@@ -26,36 +26,28 @@ public class _94_BinaryTreeInorderTraversal {
 	public List<Integer> inorderTraversal_NoRecursion(TreeNode root) {
 //		define a stack
 //		curr = root
-//	    add curr into stack
-//		while stack is not empty
-//		 		if curr.left != null
-//					push left into stack
-//					curr = curr.left
-//				else
-//					curr = stack pop
-//					do sth
-//					if curr.right != null
-//		    			add curr into stack
-//						curr = curr.right
+//		whihle curr not null || stack not null
+//			while 
+//				find each left child and put them into stack
+//				until there is no left child
+//			end while
+//			curr = stack.pop
+//			do sth
+//			curr = curr.right
 //		end while
 
 		List<Integer> result = new ArrayList<Integer>();
 		LinkedList<TreeNode> stack = new LinkedList<TreeNode>();
 		if (root != null) {
 			TreeNode curr = root;
-			stack.push(curr);
-			while (!stack.isEmpty()) {
-				if (curr.left != null) {
-					stack.push(curr.left);
+			while (curr != null | !stack.isEmpty()) {
+				while (curr != null) {
+					stack.push(curr);
 					curr = curr.left;
-				} else {
-					curr = stack.pop();
-					result.add(curr.val);
-					if (curr.right != null) {
-						stack.push(curr.right);
-						curr = curr.right;
-					}
 				}
+				curr = stack.pop();
+				result.add(curr.val);
+				curr = curr.right;
 			}
 		}
 		return result;
