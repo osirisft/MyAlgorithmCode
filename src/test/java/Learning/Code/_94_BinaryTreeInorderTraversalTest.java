@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.junit.Test;
 
+import Learning.Code.Tree._94_BinaryTreeInorderTraversal;
 import junit.framework.Assert;
 
 public class _94_BinaryTreeInorderTraversalTest {
