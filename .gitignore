@@ -30,3 +30,4 @@ target/
 *.prefs
 *.prefs
 .classpath
+.vscode/launch.json

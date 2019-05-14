@@ -36,8 +36,7 @@ public class _145_BinaryTreePostorderTraversal {
 		stack.push(curr);
 		while (!stack.isEmpty()) {
 			curr = stack.getFirst();
-			if ((curr.left == null && curr.right == null) || (preNode != null && preNode.val == curr.left.val)
-					|| (preNode != null && preNode.val == curr.right.val)) {
+			if ((curr.left == null && curr.right == null) || this.isChildVisited(preNode, curr)) {
 				curr = stack.pop();
 				preNode = curr;
 				result.add(curr.val);
@@ -53,8 +52,13 @@ public class _145_BinaryTreePostorderTraversal {
 
 	private boolean isChildVisited(TreeNode pre, TreeNode curr) {
 		boolean isVisited = false;
-		if (pre != null) {
-
+		if (pre == null) {
+			isVisited = false;
+		} else {
+			if ((pre != null && curr.left != null && pre.val == curr.left.val)
+					|| (pre != null && curr.right != null && pre.val == curr.right.val)) {
+				isVisited = true;
+			}
 		}
 		return isVisited;
 	}
