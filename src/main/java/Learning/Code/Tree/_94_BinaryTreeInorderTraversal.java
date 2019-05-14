@@ -1,8 +1,10 @@
-package Learning.Code;
+package Learning.Code.Tree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
+import Learning.Code.TreeNode;
 
 public class _94_BinaryTreeInorderTraversal {
 
