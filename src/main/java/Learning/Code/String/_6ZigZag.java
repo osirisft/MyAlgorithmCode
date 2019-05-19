@@ -1,10 +1,7 @@
 package Learning.Code.String;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 public class _6ZigZag {
 	public static String convert(String s, int numRows) {

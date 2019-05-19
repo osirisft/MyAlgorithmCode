@@ -1,7 +1,5 @@
 package Learning.Code;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 import Learning.Code.String._6ZigZag;
