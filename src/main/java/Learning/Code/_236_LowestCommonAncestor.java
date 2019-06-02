@@ -35,7 +35,7 @@ public class _236_LowestCommonAncestor {
 		}
 		pathStack.pop();
 	}
-
+ 
 	private boolean isTarget(final TreeNode curr, List<TreeNode> targetList) {
 		return targetList.stream().anyMatch(node -> {
 			return curr.val == node.val ? true : false;
